@@ -16,17 +16,27 @@ vim.opt.rtp:prepend(lazypath)
 -- Lazy.nvim setup
 require("lazy").setup({
     -- Install onehalf color scheme
-    {
-        "sonph/onehalf",
-        rtp = "vim",  -- Use the Vim runtime path
-	lazy = false,
-	config = function()
+--    {
+--        "sonph/onehalf",
+--        rtp = "vim",  -- Use the Vim runtime path
+--	lazy = false,
+--	config = function()
             -- Set onehalf as the color scheme
-	    vim.cmd("set runtimepath+=~/.config/nvim/pack/colors/start/onehalf/vim")
-	    vim.cmd("colorscheme onehalfdark")  -- Use 'onehalfdark' or 'onehalflight'
-        end,
-    },
-  -- devicons
+--	    vim.cmd("set runtimepath+=~/.config/nvim/pack/colors/start/onehalf/vim")
+--	    vim.cmd("colorscheme onehalfdark")  -- Use 'onehalfdark' or 'onehalflight'
+--        end,
+--    },
+  {
+    "neanias/everforest-nvim",
+    version = false,
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd("colorscheme everforest")
+    end
+  },
+  
+    -- devicons
   { "nvim-tree/nvim-web-devicons", lazy = true },
 
     -- language server protocol
@@ -42,11 +52,23 @@ require("lazy").setup({
       require('mason').setup()
       local mason_lspconfig = require 'mason-lspconfig'
       mason_lspconfig.setup {
-        ensure_installed = { "ruff", "pyright", "rust_analyzer", "gopls" }
+        ensure_installed = { "ruff_lsp", "pyright", "rust_analyzer", "gopls" }
       }
       require("lspconfig").pyright.setup {
         capabilities = capabilities,
-      }
+        settings = {
+          pyright = {
+         -- Using Ruff's import organizer
+            disableOrganizeImports = true,
+          },
+          python = {
+            analysis = {
+            -- Ignore all files for analysis to exclusively use Ruff for linting
+            ignore = { '*' },
+          },
+        },
+      },
+     } 
     end
   },
 
@@ -117,20 +139,11 @@ require("lazy").setup({
       require('mini.surround').setup(opts)
     end
   },
-
-  -- show indent guides on blank lines
-  { "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    event = { "BufReadPost", "BufNewFile" },
-    opts = {
-    }
-  },
 })
 
 
 -- Optional: Enable true colors
 vim.opt.termguicolors = true
 -- init.lua or within your plugin configuration setup
-
-
+vim.wo.number = true
 
