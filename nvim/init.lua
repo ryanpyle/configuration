@@ -954,3 +954,7 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
+vim.diagnostic.config {
+  update_in_insert = true,
+}
