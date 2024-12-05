@@ -1,5 +1,5 @@
 [font]
-size = 12.0
+size = 13.0
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -17,39 +17,11 @@ style = "Italic"
 family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
-[window]
-decorations = "full"
-dynamic_padding = true
+#[window]
+#decorations = "full"
+#dynamic_padding = true
 
 # the default padding
-[window.padding]
-x = 0
-y = 0
-
-# Colors (Everforest Dark)
-# Default colors
-[colors.primary]
-background = '#2d353b'
-foreground = '#d3c6aa'
-
-# Normal colors
-[colors.normal]
-black = '#475258'
-red = '#e67e80'
-green = '#a7c080'
-yellow = '#dbbc7f'
-blue = '#7fbbb3'
-magenta = '#d699b6'
-cyan = '#83c092'
-white = '#d3c6aa'
-
-# Bright colors
-[colors.bright]
-black = '#475258'
-red = '#e67e80'
-green = '#a7c080'
-yellow = '#dbbc7f'
-blue = '#7fbbb3'
-magenta = '#d699b6'
-cyan = '#83c092'
-white = '#d3c6aa'
+#[window.padding]
+#x = 0
+#y = 0
