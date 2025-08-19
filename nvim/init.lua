@@ -23,20 +23,26 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 local plugins = {
-	{ "RRethy/base16-nvim", name = "base1e-woodland", priority = 1000 },
+	{ "RRethy/base16-nvim", name = "base16-woodland", priority = 1000 },
 	{ "mason-org/mason-lspconfig.nvim",
     	   opts = {
             ensure_installed = { "lua_ls", "rust_analyzer" },
     	   },
            dependencies = {
-           { 
+           {
 	    "mason-org/mason.nvim", opts = {} },
             "neovim/nvim-lspconfig",
            },
-       },
+   	},
+	{"nvim-treesitter/nvim-treesitter",
+		highlight = {
+    			enable = true,
+  		},
+ 	},
+	{"morhetz/gruvbox"}
 }
 
 require("lazy").setup(plugins, {})
 
-vim.cmd("colorscheme base16-gruvbox-dark-hard")
+vim.opt.number = true
 
