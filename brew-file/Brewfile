@@ -1,0 +1,9 @@
+brew "git"
+brew "rustup"
+brew "neovim"
+
+cask "ghostty"
+cask "slack"
+cask "spotify"
+cask "visual-studio-code"
+cask "gather"
