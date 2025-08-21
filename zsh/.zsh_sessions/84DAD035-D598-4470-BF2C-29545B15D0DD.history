@@ -1,0 +1,48 @@
+cd ~
+ls
+cd .config
+ls
+vim .vimrc
+vim .vimrc
+vim .vimrc
+ls
+cd ..
+ls
+ls
+ls
+clear
+ls
+ls
+cd .config
+ls
+vim .vimrc
+ls
+ls -a
+cd ..
+ls
+ls
+cd .config
+ls
+mv .vimrc vim/.vimrc
+ls
+mkdir vim
+mv .vimrc vim/.vimrc
+ls
+cd ..
+ls
+clear
+cd .cofnig
+cd .config
+ls
+cd vim
+l
+sls
+ls
+vim .vimrc
+cd ..
+ls
+cd zsh
+ls
+vim .zsh
+vim .zshrc
+vim .zshrc

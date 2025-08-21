@@ -1,0 +1,29 @@
+ls
+cd Projects
+ls
+cd brain-ca
+ls
+cd monorepo
+cargo test
+cd crates
+ls
+cd hexlearn-engine
+ls
+ls
+cd src
+ls
+clear
+cd ..
+cd ..
+ls
+cd ..
+ls
+vim
+ls
+vim rust-toolchain.toml
+ls
+clear
+\:q
+clear
+nvim rust-toolchain.toml
+vim rust-toolchain.toml
